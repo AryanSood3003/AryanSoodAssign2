@@ -25,13 +25,14 @@ public class PaymentActivity extends AppCompatActivity {
     public static final String DELIVERY = "DELIVERY";
     TextView totalLabel;
     EditText name,card,address;
+
     String[] orderDetails = new String[25];
     String[] payInfo = new String[25];
     String CCname,CCnum,CCaddress;
     boolean delivery = false;
     double grossTotal =0;
     double delCharge = 0;
-
+String storeName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,15 +40,29 @@ public class PaymentActivity extends AppCompatActivity {
         name= findViewById(R.id.AryanCCName);
         card = findViewById(R.id.AryanCCNumber);
         address = findViewById(R.id.AryanAddress);
-
+        String [] arr= getResources().getStringArray(R.array.stores);
         Intent intent = getIntent();
         total(intent);
-        selection();
+        storeName = getIntent().getStringExtra(OrderActivity.LOCATION);
+        TextView storeTitle = findViewById(R.id.AryanStoreName);
+        storeTitle.setText(storeName);
+        ImageView img=(ImageView) findViewById(R.id.store_image);
+        if(storeName.equalsIgnoreCase(arr[0]))
+        {
+            img.setImageResource(R.drawable.pizpiz);}
+        else if(storeName.equalsIgnoreCase(arr[2]))
+        {
+            img.setImageResource(R.drawable.dominos);}
+        else if(storeName.equalsIgnoreCase(arr[1]))
+        {
+            img.setImageResource((R.drawable.pizzanova));}
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 
-    private void total(Intent intent) {
+
+
+    public void total(Intent intent) {
         double total = intent.getDoubleExtra(OrderActivity.TOTAL,0);
         double tax = Math.round((total*.13));
         tax=Math.round(tax*100.00)/100.00;
@@ -61,21 +76,6 @@ public class PaymentActivity extends AppCompatActivity {
         totalLabel.setText("$"+df.format(total));
     }
 
-    private void selection() {
-        String storeName = getIntent().getStringExtra(OrderActivity.LOCATION);
-        TextView storeTitle = findViewById(R.id.AryanStoreName);
-        storeTitle.setText(storeName);
-        ImageView img=(ImageView) findViewById(R.id.store_image);
-        if(storeName.equalsIgnoreCase(getString(R.string.store_name_piz)))
-        {
-            img.setImageResource(R.drawable.pizpiz);}
-        else if(storeName.equalsIgnoreCase(getString(R.string.store_name_domi)))
-        {
-            img.setImageResource(R.drawable.dominos);}
-        else if(storeName.equalsIgnoreCase(getString(R.string.store_name_nova)))
-        {
-            img.setImageResource((R.drawable.pizzanova));}
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -91,9 +91,9 @@ public class PaymentActivity extends AppCompatActivity {
         TextView deliveryCharge =  findViewById(R.id.DeliveryCharge);
         if(delivery){
             delCharge = 3;
-            deliveryCharge.setText("Delivery Charge: $"+String.valueOf(delCharge) + " (FREE!)");
+            deliveryCharge.setText(getString(R.string.charge)+String.valueOf(delCharge) + getString(R.string.Free));
         }else{
-            deliveryCharge.setText("");
+            deliveryCharge.setText(getString(R.string.charge)+getString(R.string.zero));
 
         }
     }

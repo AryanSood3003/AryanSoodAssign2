@@ -24,7 +24,6 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class AryanActivity extends AppCompatActivity {
   public static final  String STORE ="store";
-    public static final  String LOCATION="store";
     boolean storeSelect = false;
     MenuItem icon;
     String store = null;
@@ -45,20 +44,21 @@ public class AryanActivity extends AppCompatActivity {
     }
 
     public void storeClick(View view){
+        String [] arr= getResources().getStringArray(R.array.stores);
         RadioButton pizpiz = (RadioButton)findViewById(R.id.AryanPizPiz);
         RadioButton nova= (RadioButton)findViewById(R.id.AryanNova);
         if(pizpiz.isChecked()){
             storeSelect = true;
             StoreId =1;
-            store = getString(R.string.store_name_piz);
+            store = arr[0];
         }else if (nova.isChecked()){
             storeSelect = true;
             StoreId =2;
-            store = getString(R.string.store_name_nova);
+            store = arr[1];
         }else{
             storeSelect = true;
             StoreId =3;
-            store = getString(R.string.store_name_domi);
+            store = arr[2];
         }
     }
     public void displayToast(String msg){
@@ -69,6 +69,7 @@ public class AryanActivity extends AppCompatActivity {
         Intent intent = null;
         intent = new Intent(this, OrderActivity.class);
         if(storeSelect) {
+            displayToast(store);
             intent.putExtra(STORE,store);
             startActivity(intent);
         }else{
@@ -84,7 +85,7 @@ public class AryanActivity extends AppCompatActivity {
         {
             case R.id.AryanStoreLogo:
                 intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:0123456789"));
+                intent.setData(Uri.parse(getString(R.string.p_no)));
                 startActivity(intent);
                 break;
             case R.id.AryanHelp:

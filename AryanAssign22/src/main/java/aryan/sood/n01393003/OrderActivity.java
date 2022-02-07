@@ -36,19 +36,20 @@ public class OrderActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        String [] arr= getResources().getStringArray(R.array.stores);
         setContentView(R.layout.activity_order);
         snackbar_show();
         storeName = getIntent().getStringExtra(AryanActivity.STORE);
         TextView storeTitle = findViewById(R.id.AryanStoreName);
         storeTitle.setText(storeName);
         ImageView img=(ImageView) findViewById(R.id.store_image);
-        if(storeName.equalsIgnoreCase(getString(R.string.store_name_piz)))
+        if(storeName.equalsIgnoreCase(arr[0]))
         {
            img.setImageResource(R.drawable.pizpiz);}
-        else if(storeName.equalsIgnoreCase(getString(R.string.store_name_domi)))
+        else if(storeName.equalsIgnoreCase(arr[2]))
         {
             img.setImageResource(R.drawable.dominos);}
-        else if(storeName.equalsIgnoreCase(getString(R.string.store_name_nova)))
+        else if(storeName.equalsIgnoreCase(arr[1]))
         {
             img.setImageResource((R.drawable.pizzanova));}
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

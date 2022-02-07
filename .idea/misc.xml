@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="AryanAssign22/src/main/res/drawable/applogo_background.xml" value="0.1" />
         <entry key="AryanAssign22/src/main/res/layout-land/activity_aryan.xml" value="0.25" />
         <entry key="AryanAssign22/src/main/res/layout/activity_aryan.xml" value="0.2546875" />
         <entry key="AryanAssign22/src/main/res/layout/activity_checkout.xml" value="0.11096014492753623" />

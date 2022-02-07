@@ -72,7 +72,7 @@ public class CheckoutActivity extends AppCompatActivity {
                         public void onClick(DialogInterface dialog, int id) {
                             callMainActivity();
                         }})
-                    .setIcon(R.drawable.pizpiz);
+                    .setIcon(R.drawable.applogo);
 
             builder.show();
         }

@@ -76,17 +76,9 @@
     <string name="toppings">\nGarnitures :</string>
     <string name="tax">\nTaxe :</string>
     <string name="selsction">Texte incomplet/</string>
+    <string name="p_no">tel:1234567890</string>
+    <string name="charge">Delivery Charge: $</string>
+    <string name="Free">\" (FREE!)\"</string>
+    <string name="zero">$0</string>
 
-    <string-array name="provinces">
-        <item>Ontario</item>
-        <item>British Columbia</item>
-        <item>Alberta</item>
-        <item>Quebec</item>
-        <item>Manitoba</item>
-        <item>NovaScotia</item>
-        <item>New Brunswick</item>
-        <item>Prince Edward Island</item>
-        <item>Saskatchewan</item>
-        <item>Newfoundland and Labrador</item>
-    </string-array>
 </resources>

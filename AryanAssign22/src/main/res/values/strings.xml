@@ -1,3 +1,6 @@
+<!--
+Aryan Sood , N01393003, Section RNA
+-->
 <resources>
     <string name="app_name">AryanSoodN01393003</string>
     <string name="menu_help_title">Help</string>
@@ -58,11 +61,11 @@
     <string name="address_empty_error">Address empty</string>
     <string name="checkout_button">Checkout</string>
     <string name="text_label_final_pay">Payment</string>
-    <string name="del_msg">Delivery in 30min</string>
-    <string name="pick_msg">Ready for pickup in 20min</string>
+    <string name="del_msg">\nDelivery in 30min</string>
+    <string name="pick_msg">\nReady for pickup in 20min</string>
     <string name="confirmed_order_msg">Order Confirmed!!!</string>
     <string name="final_dialog_dismiss">Dismiss</string>
-    <string name="order_number">Order No: </string>
+    <string name="order_number">Order No:   </string>
     <string name="Style">Style:  </string>
     <string name="Size">\nSize:  </string>
     <string name="Toppings">\nToppings:</string>
@@ -75,17 +78,11 @@
     <string name="size">\nSize:  </string>
     <string name="toppings">\nToppings:</string>
     <string name="tax">\nTax:</string>
+    <string name="selsction">Incomplete Selection</string>
+    <string name="p_no">tel:1234567890</string>
+    <string name="charge">Delivery Charge: $</string>
+    <string name="Free">\" (FREE!)\"</string>
+    <string name="zero">$0</string>
 
-    <string-array name="provinces">
-        <item>Ontario</item>
-        <item>British Columbia</item>
-        <item>Alberta</item>
-        <item>Quebec</item>
-        <item>Manitoba</item>
-        <item>NovaScotia</item>
-        <item>New Brunswick</item>
-        <item>Prince Edward Island</item>
-        <item>Saskatchewan</item>
-        <item>Newfoundland and Labrador</item>
-    </string-array>
+
 </resources>
