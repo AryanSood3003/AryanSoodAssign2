@@ -16,7 +16,7 @@ import android.widget.Toast;
 import com.google.android.material.snackbar.Snackbar;
 
 public class AryanActivity extends AppCompatActivity {
-  public static final  String STORE ="location" ;
+  public static final  String STORE ="Store" ;
     boolean storeSelect = false;
     MenuItem icon;
     String store = null;

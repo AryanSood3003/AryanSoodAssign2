@@ -24,13 +24,15 @@ public class OrderActivity extends AppCompatActivity {
     boolean selectTop = false;
     public static final String TOTAL = "TOTAL";
     public static final String SUMMARY = "SUMMARY";
+    public static final  String LOCATION ="Store" ;
     String[] orderDetail = new String[20];
+    String storeName="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
-        String storeName = getIntent().getStringExtra(AryanActivity.STORE);
+        storeName = getIntent().getStringExtra(AryanActivity.STORE);
         TextView storeTitle = findViewById(R.id.AryanStoreName);
         storeTitle.setText(storeName);
         ImageView img=(ImageView) findViewById(R.id.store_image);
@@ -150,6 +152,7 @@ public class OrderActivity extends AppCompatActivity {
             intent = new Intent(this, PaymentActivity.class);
             intent.putExtra(TOTAL,total);
             intent.putExtra(SUMMARY,orderDetail);
+            intent.putExtra(LOCATION,storeName);
             startActivity(intent);
 
         }else{

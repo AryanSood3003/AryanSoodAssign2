@@ -44,4 +44,25 @@
     <string name="top_ext_cheese">Extra Cheese</string>
     <string name="top_oni">Onions</string>
     <string name="Review">Review Order</string>
+    <string name="summary_label">Summary</string>
+    <string name="total_label">Total</string>
+    <string name="payment_info">Payment Info</string>
+    <string name="place_order">Confirm Order</string>
+    <string name="delivery_switch">Delivery</string>
+    <string name="hint_name_on_credit_card">Name on Card</string>
+    <string name="hint_credit_card_number_max_length_8">Card Number(5 dig)</string>
+    <string name="hint_address">Address</string>
+
+    <string-array name="provinces">
+        <item>Ontario</item>
+        <item>British Columbia</item>
+        <item>Alberta</item>
+        <item>Quebec</item>
+        <item>Manitoba</item>
+        <item>NovaScotia</item>
+        <item>New Brunswick</item>
+        <item>Prince Edward Island</item>
+        <item>Saskatchewan</item>
+        <item>Newfoundland and Labrador</item>
+    </string-array>
 </resources>
