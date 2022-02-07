@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.google.android.material.snackbar.Snackbar;
 
 public class AryanActivity extends AppCompatActivity {
+  public static final  String STORE ="location" ;
     boolean storeSelect = false;
     MenuItem icon;
     String store = null;
@@ -60,6 +61,7 @@ public class AryanActivity extends AppCompatActivity {
         Intent intent = null;
         intent = new Intent(this, OrderActivity.class);
         if(storeSelect) {
+            intent.putExtra(STORE,store);
             startActivity(intent);
         }else{
             displayToast(getString(R.string.select_store_msg));

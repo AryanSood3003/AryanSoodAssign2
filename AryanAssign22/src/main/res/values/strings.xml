@@ -30,4 +30,18 @@
     <string name="onions_50">Onions +$1.0</string>
     <string name="text_label_type">Select Type</string>
     <string name="extra_cheese_50">Extra Cheese +$1.0</string>
+    <string name="italian_15_99">Italian $15.99</string>
+    <string name="boston_lael">Boston</string>
+    <string name="chesse_label">Cheese</string>
+    <string name="chicago_label">Chicago</string>
+    <string name="italian_label">Italian</string>
+    <string name="pizza_size_small">Small</string>
+    <string name="pizza_size_med">Medium</string>
+    <string name="pizza_size_lg">Large</string>
+    <string name="top_chick">Chicken</string>
+    <string name="top_R_pep">Pepper</string>
+    <string name="top_pine">Pineapple</string>
+    <string name="top_ext_cheese">Extra Cheese</string>
+    <string name="top_oni">Onions</string>
+    <string name="Review">Review Order</string>
 </resources>
