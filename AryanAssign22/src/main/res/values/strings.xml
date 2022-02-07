@@ -56,6 +56,8 @@
     <string name="CCnum_error">Credit Card Number too short</string>
     <string name="empty_field_error">Credit card empty</string>
     <string name="address_empty_error">Address empty</string>
+    <string name="checkout_button">Checkout</string>
+    <string name="text_label_final_pay">Payment</string>
 
     <string-array name="provinces">
         <item>Ontario</item>
