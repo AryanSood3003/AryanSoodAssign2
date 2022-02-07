@@ -15,4 +15,19 @@
     <string name="store_name_nova">Pizza Nova</string>
     <string name="store_name_domi">Dominos</string>
     <string name="select_store_msg">Please select a store</string>
+    <string name="boston_style_9_99">Boston Style $9.99</string>
+    <string name="cheese_5_99">Margerita $5.99</string>
+    <string name="chicago_style_12_99">Chicago Style $12.99</string>
+    <string name="text_label_size">Select Pizza Size</string>
+    <string name="small_4_50">Small $4.5</string>
+    <string name="medium_6_5">Medium $6.5</string>
+    <string name="large_8_5">Large $8.5</string>
+    <string name="extra_toppings">Select Extra Toppings(atleast one)</string>
+    <string name="chicken_50">Chicken + $1.0</string>
+    <string name="red_pepper_50">Red Pepper +$0.50</string>
+    <string name="continue_button">Next</string>
+    <string name="pineapple_50">Pineapple +$0.50</string>
+    <string name="onions_50">Onions +$1.0</string>
+    <string name="text_label_type">Select Type</string>
+    <string name="extra_cheese_50">Extra Cheese +$1.0</string>
 </resources>
