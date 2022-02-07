@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AryanSoodN01393003</string>
+    <string name="menu_help_title">Help</string>
+    <string name="menu_store_logo">logo</string>
+    <string name="menu_usr_name">Aryan</string>
+    <string name="help_redirect">https://www.apple.com/ca/</string>
+    <string name="help_pizza">"Assignment 2 "</string>
+</resources>
