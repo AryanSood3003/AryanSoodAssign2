@@ -30,4 +30,31 @@ public class AryanActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = null;
+        String helpSite = getString(R.string.help_redirect);
+        switch (item.getItemId())
+        {
+            case R.id.AryanStoreLogo:
+                intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:0123456789"));
+                startActivity(intent);
+                break;
+            case R.id.AryanHelp:
+                intent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse(helpSite));
+                Context context = getApplicationContext();
+                startActivity(intent);
+                break;
+            case R.id.Aryanlogo2:
+                View parentLayout = findViewById(android.R.id.content);
+                Snackbar snackbar=Snackbar.make(parentLayout,
+                        R.string.help_pizza,
+                        Snackbar.LENGTH_LONG);
+                snackbar.show();
+                break;
+
+        }   return super.onOptionsItemSelected(item);
+    }
 }
