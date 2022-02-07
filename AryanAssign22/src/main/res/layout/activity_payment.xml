@@ -21,12 +21,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.048" />
 
+    <ImageView
+        android:id="@+id/store_image"
+        android:layout_width="126dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="572dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/AryanStoreName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/SummaryLabel"
         android:layout_width="163dp"
         android:layout_height="52dp"
+        android:textColor="@color/blue"
         android:text="@string/summary_label"
         app:autoSizeTextType="uniform"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.02"
@@ -36,72 +50,77 @@
 
     <TextView
         android:id="@+id/Total_label"
-        android:layout_width="61dp"
-        android:layout_height="23dp"
+        android:layout_width="113dp"
+        android:layout_height="37dp"
         android:text="@string/total_label"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.367" />
+        app:layout_constraintVertical_bias="0.45" />
 
     <TextView
         android:id="@+id/PaymentInfoLabel"
         android:layout_width="152dp"
+        android:textColor="@color/blue"
         android:layout_height="31dp"
         android:text="@string/payment_info"
+        android:textStyle="bold"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.435" />
+        app:layout_constraintVertical_bias="0.532" />
 
     <ImageButton
         android:id="@+id/PlaceOrder"
         android:layout_width="133dp"
         android:layout_height="71dp"
         android:background="@drawable/right"
+        android:onClick="onPlaceOrder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintHorizontal_bias="0.942"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.942" />
+        app:layout_constraintVertical_bias="0.975" />
 
     <Spinner
         android:id="@+id/Provinces"
         android:layout_width="239dp"
         android:layout_height="26dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="80dp"
         android:entries="@array/provinces"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintHorizontal_bias="0.191"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AryanCCNumber" />
 
     <Switch
         android:id="@+id/AryanDeliveryOption"
         android:layout_width="wrap_content"
+        android:textStyle="bold"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="661dp"
+        android:layout_marginEnd="264dp"
+        android:onClick="callSwitch"
         android:text="@string/delivery_switch"
-        app:layout_constraintBottom_toTopOf="@+id/PlaceOrder"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AryanCCNumber"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/AryanOrderSummary"
         android:layout_width="308dp"
         android:layout_height="83dp"
         android:layout_marginTop="20dp"
+        android:textStyle="bold"
         android:layout_marginEnd="96dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SummaryLabel" />
@@ -110,30 +129,31 @@
         android:id="@+id/AryanCCName"
         android:layout_width="386dp"
         android:layout_height="50dp"
+        android:layout_marginStart="9dp"
         android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ  "
+
         android:ems="10"
         android:hint="@string/hint_name_on_credit_card"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/AryanCCNumber"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PaymentInfoLabel"
-        app:layout_constraintVertical_bias="0.634" />
+        app:layout_constraintVertical_bias="0.848" />
 
     <EditText
         android:id="@+id/AryanCCNumber"
         android:layout_width="388dp"
         android:layout_height="55dp"
-        android:layout_marginTop="408dp"
+        android:layout_marginTop="485dp"
+        android:layout_marginEnd="16dp"
         android:digits="0123456789"
         android:ems="10"
         android:hint="@string/hint_credit_card_number_max_length_8"
         android:inputType="phone"
         android:maxLength="5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -146,30 +166,32 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/Provinces"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AryanCCNumber"
-        app:layout_constraintVertical_bias="0.047" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/AryanTotalAmount"
-        android:layout_width="91dp"
-        android:layout_height="23dp"
+        android:layout_width="92dp"
+        android:layout_height="29dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="176dp"
+        android:layout_marginEnd="136dp"
         android:layout_marginBottom="22dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/PaymentInfoLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AryanOrderSummary"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.967" />
 
     <TextView
         android:id="@+id/DeliveryCharge"
         android:layout_width="134dp"
         android:layout_height="35dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="172dp"
-        app:layout_constraintEnd_toEndOf="@+id/AryanOrderSummary"
-        app:layout_constraintTop_toTopOf="@+id/AryanOrderSummary" />
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="256dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

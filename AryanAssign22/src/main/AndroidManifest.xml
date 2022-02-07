@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AryanAssign2">
         <activity
+            android:name=".CheckoutActivity"
+            android:exported="false" />
+        <activity
             android:name=".PaymentActivity"
             android:exported="false" />
         <activity

@@ -32,6 +32,7 @@ public class OrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
+        snackbar_show();
         storeName = getIntent().getStringExtra(AryanActivity.STORE);
         TextView storeTitle = findViewById(R.id.AryanStoreName);
         storeTitle.setText(storeName);
@@ -46,10 +47,10 @@ public class OrderActivity extends AppCompatActivity {
         {
             img.setImageResource((R.drawable.pizzanova));}
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-      snackbar_show();
+
     }
 
-    private void snackbar_show() {
+    void snackbar_show() {
         View parentLayout = findViewById(android.R.id.content);
         Snackbar snackbar=Snackbar.make(parentLayout, R.string.Review, Snackbar.LENGTH_INDEFINITE)
                 .setAction(R.string.next , new View.OnClickListener()
@@ -161,6 +162,7 @@ public class OrderActivity extends AppCompatActivity {
         }
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -170,5 +172,10 @@ public class OrderActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+        snackbar_show();
     }
 }

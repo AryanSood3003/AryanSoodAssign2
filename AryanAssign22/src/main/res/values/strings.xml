@@ -38,11 +38,11 @@
     <string name="pizza_size_small">Small</string>
     <string name="pizza_size_med">Medium</string>
     <string name="pizza_size_lg">Large</string>
-    <string name="top_chick">Chicken</string>
-    <string name="top_R_pep">Pepper</string>
-    <string name="top_pine">Pineapple</string>
-    <string name="top_ext_cheese">Extra Cheese</string>
-    <string name="top_oni">Onions</string>
+    <string name="top_chick">\"Chicken\"</string>
+    <string name="top_R_pep">\"Pepper\"</string>
+    <string name="top_pine">\"Pineapple\"</string>
+    <string name="top_ext_cheese">\"Extra Cheese\"</string>
+    <string name="top_oni">\"Onions\"</string>
     <string name="Review">Review Order</string>
     <string name="summary_label">Summary</string>
     <string name="total_label">Total</string>
@@ -52,6 +52,10 @@
     <string name="hint_name_on_credit_card">Name on Card</string>
     <string name="hint_credit_card_number_max_length_8">Card Number(5 dig)</string>
     <string name="hint_address">Address</string>
+    <string name="CCname_3_error">Credit card name too short</string>
+    <string name="CCnum_error">Credit Card Number too short</string>
+    <string name="empty_field_error">Credit card empty</string>
+    <string name="address_empty_error">Address empty</string>
 
     <string-array name="provinces">
         <item>Ontario</item>

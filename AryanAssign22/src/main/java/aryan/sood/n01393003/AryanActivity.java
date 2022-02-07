@@ -10,13 +10,16 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewParent;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
 public class AryanActivity extends AppCompatActivity {
-  public static final  String STORE ="Store" ;
+  public static final  String STORE ="store";
+    public static final  String LOCATION="store";
     boolean storeSelect = false;
     MenuItem icon;
     String store = null;
@@ -95,4 +98,6 @@ public class AryanActivity extends AppCompatActivity {
 
         }   return super.onOptionsItemSelected(item);
     }
+
+
 }
