@@ -10,11 +10,16 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
 public class AryanActivity extends AppCompatActivity {
+    boolean storeSelect = false;
     MenuItem icon;
+    String store = null;
+    int StoreId = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +33,37 @@ public class AryanActivity extends AppCompatActivity {
         inflater.inflate(R.menu.main_menu,menu);
         icon = menu.getItem(1);
         return true;
+    }
+
+    public void storeClick(View view){
+        RadioButton pizpiz = (RadioButton)findViewById(R.id.AryanPizPiz);
+        RadioButton nova= (RadioButton)findViewById(R.id.AryanNova);
+        if(pizpiz.isChecked()){
+            storeSelect = true;
+            StoreId =1;
+            store = getString(R.string.store_name_piz);
+        }else if (nova.isChecked()){
+            storeSelect = true;
+            StoreId =2;
+            store = getString(R.string.store_name_nova);
+        }else{
+            storeSelect = true;
+            StoreId =3;
+            store = getString(R.string.store_name_domi);
+        }
+    }
+    public void displayToast(String msg){
+        Toast.makeText(getBaseContext(),msg,Toast.LENGTH_SHORT).show();
+    }
+
+    public void onNext(View view){
+        Intent intent = null;
+        intent = new Intent(this, OrderActivity.class);
+        if(storeSelect) {
+            startActivity(intent);
+        }else{
+            displayToast(getString(R.string.select_store_msg));
+        }
     }
 
     @Override

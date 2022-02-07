@@ -11,4 +11,8 @@
     <string name="next">Next</string>
     <string name="welcome_msg">Welcome!!</string>
     <string name="select_a_store_msg">Please Select a store</string>
+    <string name="store_name_piz">Pizza Pizza</string>
+    <string name="store_name_nova">Pizza Nova</string>
+    <string name="store_name_domi">Dominos</string>
+    <string name="select_store_msg">Please select a store</string>
 </resources>

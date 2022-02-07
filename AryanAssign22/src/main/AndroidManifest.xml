@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AryanAssign2">
         <activity
+            android:name=".OrderActivity"
+            android:exported="false" />
+        <activity
             android:name=".AryanActivity"
             android:exported="true">
             <intent-filter>

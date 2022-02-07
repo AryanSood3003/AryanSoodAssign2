@@ -21,18 +21,21 @@
             android:id="@+id/AryanPizPiz"
             android:layout_width="match_parent"
             android:layout_height="67dp"
+            android:onClick="storeClick"
             android:text="@string/radio_label_piz" />
 
         <RadioButton
             android:id="@+id/AryanNova"
             android:layout_width="match_parent"
             android:layout_height="71dp"
+            android:onClick="storeClick"
             android:text="@string/radio_label_nova" />
 
         <RadioButton
             android:id="@+id/AryanDomin"
             android:layout_width="match_parent"
             android:layout_height="69dp"
+            android:onClick="storeClick"
             android:text="@string/radio_label_domi" />
 
     </RadioGroup>
@@ -42,6 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/next"
+        android:onClick="onNext"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
