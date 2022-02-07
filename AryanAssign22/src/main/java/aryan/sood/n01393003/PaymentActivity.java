@@ -1,3 +1,8 @@
+//Aryan Sood
+//N01393003
+//CENG 258 RNA
+
+
 package aryan.sood.n01393003;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,7 +53,7 @@ public class PaymentActivity extends AppCompatActivity {
         tax=Math.round(tax*100.00)/100.00;
         orderDetails = intent.getStringArrayExtra(OrderActivity.SUMMARY);
         TextView orderSummary = findViewById(R.id.AryanOrderSummary);
-        orderSummary.setText("Style:  "+ orderDetails[0] +"\nSize:  "+ orderDetails[1]+ "\nToppings:"+ orderDetails[2] +"\nTax:"+ tax);
+        orderSummary.setText(getString(R.string.style)+ orderDetails[0] +getString(R.string.size)+ orderDetails[1]+ getString(R.string.toppings)+ orderDetails[2] +getString(R.string.tax)+ tax);
         totalLabel = findViewById(R.id.AryanTotalAmount);
         total += tax;
         grossTotal = total;

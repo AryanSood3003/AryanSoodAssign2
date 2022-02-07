@@ -58,6 +58,23 @@
     <string name="address_empty_error">Address empty</string>
     <string name="checkout_button">Checkout</string>
     <string name="text_label_final_pay">Payment</string>
+    <string name="del_msg">Delivery in 30min</string>
+    <string name="pick_msg">Ready for pickup in 20min</string>
+    <string name="confirmed_order_msg">Order Confirmed!!!</string>
+    <string name="final_dialog_dismiss">Dismiss</string>
+    <string name="order_number">Order No: </string>
+    <string name="Style">Style:  </string>
+    <string name="Size">\nSize:  </string>
+    <string name="Toppings">\nToppings:</string>
+    <string name="ttl">\nGross Total:</string>
+    <string name="name">Name:</string>
+    <string name="Card_num">\nCard Number: </string>
+    <string name="addr">\nAddress: </string>
+    <string name="sure">Plesse Make Sure that the details are correct</string>
+    <string name="style">Style:  </string>
+    <string name="size">\nSize:  </string>
+    <string name="toppings">\nToppings:</string>
+    <string name="tax">\nTax:</string>
 
     <string-array name="provinces">
         <item>Ontario</item>

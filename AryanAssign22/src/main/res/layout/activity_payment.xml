@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/blue"
-        android:textSize="25sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +25,7 @@
         android:id="@+id/store_image"
         android:layout_width="126dp"
         android:layout_height="62dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="52dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="572dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -37,24 +37,24 @@
         android:id="@+id/SummaryLabel"
         android:layout_width="163dp"
         android:layout_height="52dp"
-        android:textColor="@color/blue"
         android:text="@string/summary_label"
-        app:autoSizeTextType="uniform"
+        android:textColor="@color/blue"
         android:textStyle="bold"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.141" />
+        app:layout_constraintVertical_bias="0.139" />
 
     <TextView
         android:id="@+id/Total_label"
         android:layout_width="113dp"
         android:layout_height="37dp"
         android:text="@string/total_label"
-        android:textStyle="bold"
         android:textColor="@color/blue"
+        android:textStyle="bold"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,9 +66,9 @@
     <TextView
         android:id="@+id/PaymentInfoLabel"
         android:layout_width="152dp"
-        android:textColor="@color/blue"
         android:layout_height="31dp"
         android:text="@string/payment_info"
+        android:textColor="@color/blue"
         android:textStyle="bold"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -80,16 +80,16 @@
 
     <ImageButton
         android:id="@+id/PlaceOrder"
-        android:layout_width="133dp"
-        android:layout_height="71dp"
+        android:layout_width="76dp"
+        android:layout_height="42dp"
         android:background="@drawable/right"
         android:onClick="onPlaceOrder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintHorizontal_bias="0.901"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975" />
+        app:layout_constraintVertical_bias="0.959" />
 
     <Spinner
         android:id="@+id/Provinces"
@@ -106,24 +106,25 @@
     <Switch
         android:id="@+id/AryanDeliveryOption"
         android:layout_width="wrap_content"
-        android:textStyle="bold"
         android:layout_height="wrap_content"
         android:layout_marginTop="661dp"
         android:layout_marginEnd="264dp"
         android:onClick="callSwitch"
         android:text="@string/delivery_switch"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/AryanOrderSummary"
-        android:layout_width="308dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="337dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="44dp"
         android:textStyle="bold"
-        android:layout_marginEnd="96dp"
+        app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SummaryLabel" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/AryanCCName"
@@ -131,7 +132,6 @@
         android:layout_height="50dp"
         android:layout_marginStart="9dp"
         android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ  "
-
         android:ems="10"
         android:hint="@string/hint_name_on_credit_card"
         android:inputType="textPersonName"
@@ -189,8 +189,9 @@
         android:id="@+id/DeliveryCharge"
         android:layout_width="134dp"
         android:layout_height="35dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="256dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="240dp"
+        app:autoSizeTextType="uniform"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
