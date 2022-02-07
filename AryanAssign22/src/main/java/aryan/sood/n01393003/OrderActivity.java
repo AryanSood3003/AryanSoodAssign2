@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,11 +30,19 @@ public class OrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
-
         String storeName = getIntent().getStringExtra(AryanActivity.STORE);
         TextView storeTitle = findViewById(R.id.AryanStoreName);
         storeTitle.setText(storeName);
-
+        ImageView img=(ImageView) findViewById(R.id.store_image);
+        if(storeName.equalsIgnoreCase(getString(R.string.store_name_piz)))
+        {
+           img.setImageResource(R.drawable.pizpiz);}
+        else if(storeName.equalsIgnoreCase(getString(R.string.store_name_domi)))
+        {
+            img.setImageResource(R.drawable.dominos);}
+        else if(storeName.equalsIgnoreCase(getString(R.string.store_name_nova)))
+        {
+            img.setImageResource((R.drawable.pizzanova));}
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
       snackbar_show();
     }
