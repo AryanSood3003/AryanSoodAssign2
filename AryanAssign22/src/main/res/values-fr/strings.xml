@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">AryanSoodN01393003</string>
+    <string name="menu_help_title">Aider</string>
+    <string name="menu_store_logo">logo</string>
+    <string name="menu_usr_name">Aryan</string>
+    <string name="help_redirect">https://www.apple.com/ca/</string>
+    <string name="help_pizza">« Devoir 2 »</string>
+    <string name="radio_label_piz">Pizza pizza</string>
+    <string name="radio_label_domi">Dominos</string>
+    <string name="radio_label_nova">Pizza Nova</string>
+    <string name="next">Suivant</string>
+    <string name="welcome_msg">Bienvenue!!</string>
+    <string name="select_a_store_msg">Veuillez sélectionner un magasin</string>
+    <string name="store_name_piz">Pizza pizza</string>
+    <string name="store_name_nova">Pizza Nova</string>
+    <string name="store_name_domi">Dominos</string>
+    <string name="select_store_msg">Veuillez sélectionner un magasin</string>
+    <string name="boston_style_9_99">Style bostonien 9,99 $</string>
+    <string name="cheese_5_99">Marguerite 5,99 $</string>
+    <string name="chicago_style_12_99">Style chicago 12,99 $</string>
+    <string name="text_label_size">Sélectionnez la taille de la pizza</string>
+    <string name="small_4_50">Petit $4.5</string>
+    <string name="medium_6_5">Moyen $6.5</string>
+    <string name="large_8_5">Grand $8.5</string>
+    <string name="extra_toppings">Sélectionnez des garnitures supplémentaires (au moins une)</string>
+    <string name="chicken_50">Poulet $1.0</string>
+    <string name="red_pepper_50">Poivron rouge $0.50</string>
+    <string name="continue_button">Suivant</string>
+    <string name="pineapple_50">Ananas $0.50</string>
+    <string name="onions_50">Oignons $1.0</string>
+    <string name="text_label_type">Sélectionner le genre</string>
+    <string name="extra_cheese_50">Fromage supplémentaire 1,0 $</string>
+    <string name="italian_15_99">Italien $15.99</string>
+    <string name="boston_lael">Boston</string>
+    <string name="chesse_label">Du fromage</string>
+    <string name="chicago_label">Chicago</string>
+    <string name="italian_label">italien</string>
+    <string name="pizza_size_small">Petit</string>
+    <string name="pizza_size_med">Moyen</string>
+    <string name="pizza_size_lg">Grande</string>
+    <string name="top_chick">\"Poulet\"</string>
+    <string name="top_R_pep">\"Poivre\"</string>
+    <string name="top_pine">\"L\'ananas\"</string>
+    <string name="top_ext_cheese">\"Fromage supplémentaire\"</string>
+    <string name="top_oni">\"Oignons\"</string>
+    <string name="Review">Réviser la commande</string>
+    <string name="summary_label">Résumé</string>
+    <string name="total_label">Le total</string>
+    <string name="payment_info">Information de paiement</string>
+    <string name="place_order">Confirmer la commande</string>
+    <string name="delivery_switch">Livraison</string>
+    <string name="hint_name_on_credit_card">Nom sur la carte</string>
+    <string name="hint_credit_card_number_max_length_8">Numéro de carte (5 chiffres)</string>
+    <string name="hint_address">Adresse</string>
+    <string name="CCname_3_error">Nom de la carte de crédit trop court</string>
+    <string name="CCnum_error">Numéro de carte de crédit trop court</string>
+    <string name="empty_field_error">Carte de crédit vide</string>
+    <string name="address_empty_error">Adresse vide</string>
+    <string name="checkout_button">Vérifier</string>
+    <string name="text_label_final_pay">Paiement</string>
+    <string name="del_msg">Livraison en 30min</string>
+    <string name="pick_msg">Prêt pour le ramassage en 20 minutes</string>
+    <string name="confirmed_order_msg">Commande confirmée!!!</string>
+    <string name="final_dialog_dismiss">Rejeter</string>
+    <string name="order_number">N ° de commande:</string>
+    <string name="Style">Style:</string>
+    <string name="Size">\nTaille :</string>
+    <string name="Toppings">\nGarnitures :</string>
+    <string name="ttl">\nTotal brut :</string>
+    <string name="name">Nom:</string>
+    <string name="Card_num">\nNuméro de carte :</string>
+    <string name="addr">\nAdresse :</string>
+    <string name="sure">Veuillez vous assurer que les détails sont corrects</string>
+    <string name="style">Style:</string>
+    <string name="size">\nTaille :</string>
+    <string name="toppings">\nGarnitures :</string>
+    <string name="tax">\nTaxe :</string>
+    <string name="selsction">Texte incomplet/</string>
+
+    <string-array name="provinces">
+        <item>Ontario</item>
+        <item>British Columbia</item>
+        <item>Alberta</item>
+        <item>Quebec</item>
+        <item>Manitoba</item>
+        <item>NovaScotia</item>
+        <item>New Brunswick</item>
+        <item>Prince Edward Island</item>
+        <item>Saskatchewan</item>
+        <item>Newfoundland and Labrador</item>
+    </string-array>
+</resources>

@@ -162,7 +162,7 @@ public class OrderActivity extends AppCompatActivity {
             startActivity(intent);
 
         }else{
-            Toast.makeText(getBaseContext(),"Incomplete Selection",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), R.string.selsction,Toast.LENGTH_SHORT).show();
             snackbar_show();
         }
     }

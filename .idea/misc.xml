@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="AryanAssign22/src/main/res/layout-land/activity_aryan.xml" value="0.25" />
         <entry key="AryanAssign22/src/main/res/layout/activity_aryan.xml" value="0.2546875" />
+        <entry key="AryanAssign22/src/main/res/layout/activity_checkout.xml" value="0.11096014492753623" />
         <entry key="AryanAssign22/src/main/res/layout/activity_order.xml" value="0.165" />
+        <entry key="AryanAssign22/src/main/res/layout/activity_payment.xml" value="0.25" />
+        <entry key="AryanAssign22/src/main/res/layout/activity_summary.xml" value="0.14488348530901723" />
         <entry key="AryanAssign22/src/main/res/menu/main_menu.xml" value="0.2546875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13145896656534956" />
         <entry key="app/src/main/res/menu/main_menu.xml" value="0.17777777777777778" />
