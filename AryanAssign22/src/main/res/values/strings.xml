@@ -5,4 +5,10 @@
     <string name="menu_usr_name">Aryan</string>
     <string name="help_redirect">https://www.apple.com/ca/</string>
     <string name="help_pizza">"Assignment 2 "</string>
+    <string name="radio_label_piz">Pizza Pizza</string>
+    <string name="radio_label_domi">Dominos</string>
+    <string name="radio_label_nova">Pizza Nova</string>
+    <string name="next">Next</string>
+    <string name="welcome_msg">Welcome!!</string>
+    <string name="select_a_store_msg">Please Select a store</string>
 </resources>
