@@ -35,7 +35,7 @@ public class CheckoutActivity extends AppCompatActivity {
             TextView finalcheck = findViewById(R.id.finalOrderSummary);
             TextView finalpay = findViewById(R.id.FinalPaymentInfo);
             finalcheck.setText(getString(R.string.Style)+ orderDetails[0] +getString(R.string.Size)+ orderDetails[1]+ getString(R.string.Toppings)+ orderDetails[2] +getString(R.string.ttl)+ grossTotal);
-            finalpay.setText(getString(R.string.name) + payDetails[0] + getString(R.string.Card_num) + payDetails[1]+ getString(R.string.addr) + payDetails[2]);
+            finalpay.setText(getString(R.string.name) + payDetails[0] + getString(R.string.Card_num) + payDetails[1]+ getString(R.string.addr) + payDetails[2]+getString(R.string.province)+payDetails[3]);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         @Override

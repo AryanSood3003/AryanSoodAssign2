@@ -2,7 +2,7 @@
 Aryan Sood , N01393003, Section RNA
 -->
 <resources>
-    <string name="app_name">AryanSoodN01393003</string>
+    <string name="app_name">Aryan Sood N01393003</string>
     <string name="menu_help_title">Help</string>
     <string name="menu_store_logo">logo</string>
     <string name="menu_usr_name">Aryan</string>
@@ -60,7 +60,6 @@ Aryan Sood , N01393003, Section RNA
     <string name="empty_field_error">Credit card empty</string>
     <string name="address_empty_error">Address empty</string>
     <string name="checkout_button">Checkout</string>
-    <string name="text_label_final_pay">Payment</string>
     <string name="del_msg">\nDelivery in 30min</string>
     <string name="pick_msg">\nReady for pickup in 20min</string>
     <string name="confirmed_order_msg">Order Confirmed!!!</string>
@@ -80,9 +79,17 @@ Aryan Sood , N01393003, Section RNA
     <string name="tax">\nTax:</string>
     <string name="selsction">Incomplete Selection</string>
     <string name="p_no">tel:1234567890</string>
-    <string name="charge">Delivery Charge: $</string>
+    <string name="charge">Delivery Charge: </string>
     <string name="Free">\" (FREE!)\"</string>
     <string name="zero">$0</string>
+    <string name="radio_label_papa">Papa Johns</string>
+    <string name="exit">Exit</string>
+    <string name="exitmsg">Are you sure you want to exit??</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="province">\nProvince: </string>
+    <string name="order_details">Order Details</string>
+    <string name="order_payment">Payment Details</string>
 
 
 </resources>

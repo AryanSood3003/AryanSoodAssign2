@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -27,8 +28,8 @@ public class PaymentActivity extends AppCompatActivity {
     EditText name,card,address;
 
     String[] orderDetails = new String[25];
-    String[] payInfo = new String[25];
-    String CCname,CCnum,CCaddress;
+    String[] payInfo = new String[20];
+    String CCname,CCnum,CCaddress,Province;
     boolean delivery = false;
     double grossTotal =0;
     double delCharge = 0;
@@ -56,12 +57,15 @@ String storeName;
         else if(storeName.equalsIgnoreCase(arr[1]))
         {
             img.setImageResource((R.drawable.pizzanova));}
+        else if(storeName.equalsIgnoreCase(arr[3]))
+        {
+            img.setImageResource(R.drawable.papa);
+        }
+        Spinner spinner = (Spinner)findViewById(R.id.Provinces);
+        String text = spinner.getSelectedItem().toString();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
-
-
-
     public void total(Intent intent) {
         double total = intent.getDoubleExtra(OrderActivity.TOTAL,0);
         double tax = Math.round((total*.13));
@@ -101,11 +105,14 @@ String storeName;
         payInfo[0] = CCname;
         payInfo[1] =CCnum;
         payInfo[2] = CCaddress;
+        payInfo[3]=Province;
     }
     public boolean validateName(){
         CCname = name.getText().toString().trim();
         CCnum = card.getText().toString();
         CCaddress = address.getText().toString();
+        Spinner spinner = (Spinner)findViewById(R.id.Provinces);
+        Province = spinner.getSelectedItem().toString();
         boolean validate = true;
         if(CCname.length()<3){
             name.setError(getString(R.string.CCname_3_error));

@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,8 +31,10 @@ public class OrderActivity extends AppCompatActivity {
     public static final String TOTAL = "TOTAL";
     public static final String SUMMARY = "SUMMARY";
     public static final  String LOCATION ="Store" ;
+
     String[] orderDetail = new String[20];
     String storeName="";
+    String text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +55,10 @@ public class OrderActivity extends AppCompatActivity {
         else if(storeName.equalsIgnoreCase(arr[1]))
         {
             img.setImageResource((R.drawable.pizzanova));}
+        else if(storeName.equalsIgnoreCase(arr[3]))
+        {
+            img.setImageResource(R.drawable.papa);
+        }
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
@@ -160,6 +167,7 @@ public class OrderActivity extends AppCompatActivity {
             intent.putExtra(TOTAL,total);
             intent.putExtra(SUMMARY,orderDetail);
             intent.putExtra(LOCATION,storeName);
+
             startActivity(intent);
 
         }else{

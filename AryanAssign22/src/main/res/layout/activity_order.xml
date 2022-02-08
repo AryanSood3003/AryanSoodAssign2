@@ -264,7 +264,7 @@
         android:id="@+id/store_image"
         android:layout_width="118dp"
         android:layout_height="70dp"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="572dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AryanSoodN01393003</string>
+    <string name="app_name">Aryan Sood N01393003</string>
     <string name="menu_help_title">Aider</string>
     <string name="menu_store_logo">logo</string>
     <string name="menu_usr_name">Aryan</string>
@@ -57,7 +57,6 @@
     <string name="empty_field_error">Carte de crédit vide</string>
     <string name="address_empty_error">Adresse vide</string>
     <string name="checkout_button">Vérifier</string>
-    <string name="text_label_final_pay">Paiement</string>
     <string name="del_msg">Livraison en 30min</string>
     <string name="pick_msg">Prêt pour le ramassage en 20 minutes</string>
     <string name="confirmed_order_msg">Commande confirmée!!!</string>
@@ -80,5 +79,15 @@
     <string name="charge">Delivery Charge: $</string>
     <string name="Free">\" (FREE!)\"</string>
     <string name="zero">$0</string>
+    <string name="radio_label_papa">Papa Johns</string>
+    <string name="exit">Sortie</string>
+    <string name="exitmsg">Êtes-vous sûr de vouloir quitter??</string>
+    <string name="yes">Oui</string>
+    <string name="province">\nProvince: </string>
+    <string name="no">Non</string>
+    <string name="order_details">étails de la commande</string>
+    <string name="order_payment">Détails de paiement</string>
+
+
 
 </resources>

@@ -12,20 +12,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/blue"
-        android:textSize="35sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.046" />
 
     <ImageView
         android:id="@+id/store_image"
         android:layout_width="126dp"
         android:layout_height="62dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="88dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="572dp"
         app:layout_constraintBottom_toBottomOf="parent"

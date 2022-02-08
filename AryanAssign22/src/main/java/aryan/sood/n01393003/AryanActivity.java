@@ -5,9 +5,11 @@
 
 package aryan.sood.n01393003;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -32,35 +34,46 @@ public class AryanActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aryan);
-       icon = findViewById(R.id.AryanStoreLogo);
+        icon = findViewById(R.id.AryanStoreLogo);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
-
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu,menu);
         icon = menu.getItem(1);
         return true;
     }
 
-    public void storeClick(View view){
-        String [] arr= getResources().getStringArray(R.array.stores);
-        RadioButton pizpiz = (RadioButton)findViewById(R.id.AryanPizPiz);
-        RadioButton nova= (RadioButton)findViewById(R.id.AryanNova);
-        if(pizpiz.isChecked()){
+    public void storeClick(View view) {
+        storeselect();
+    }
+
+    public void storeselect() {
+        String[] arr = getResources().getStringArray(R.array.stores);
+        RadioButton pizpiz = (RadioButton) findViewById(R.id.AryanPizPiz);
+        RadioButton nova = (RadioButton) findViewById(R.id.AryanNova);
+        RadioButton domi = (RadioButton) findViewById(R.id.AryanDomin);
+        RadioButton papa=(RadioButton) findViewById(R.id.Aryanpapa);
+        if (pizpiz.isChecked()) {
             storeSelect = true;
-            StoreId =1;
+            StoreId = 1;
             store = arr[0];
-        }else if (nova.isChecked()){
+        } else if (nova.isChecked()) {
             storeSelect = true;
-            StoreId =2;
+            StoreId = 2;
             store = arr[1];
-        }else{
+        } else if (domi.isChecked()) {
             storeSelect = true;
-            StoreId =3;
+            StoreId = 3;
             store = arr[2];
+        } else if(papa.isChecked()) {
+            storeSelect = true;
+            StoreId = 3;
+            store = arr[3];
         }
     }
+
+
     public void displayToast(String msg){
         Toast.makeText(getBaseContext(),msg,Toast.LENGTH_SHORT).show();
     }
@@ -104,6 +117,32 @@ public class AryanActivity extends AppCompatActivity {
 
         }   return super.onOptionsItemSelected(item);
     }
+    @Override
+    public void onResume(){
+        super.onResume();
+      storeselect();
+
+    }
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(AryanActivity.this);
+        builder.setTitle(R.string.exit);
+        builder.setMessage(R.string.exitmsg)
+                .setCancelable(false)
+                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finishAffinity();
+                        System.exit(0);
+                    }
+                })
+                .setIcon(R.drawable.alert)
+                .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                    }
+                });
+        builder.show();
+    }
+
 
 
 }

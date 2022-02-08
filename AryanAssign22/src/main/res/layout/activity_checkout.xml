@@ -11,7 +11,7 @@
         android:layout_width="359dp"
         android:layout_height="109dp"
         android:textSize="20sp"
-       android:textStyle="bold"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,10 +26,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/finalOrderSummary"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintVertical_bias="0.148" />
 
     <Button
         android:id="@+id/FinalCheckoutButton"
@@ -42,13 +42,14 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.897" />
+        app:layout_constraintVertical_bias="0.932" />
 
     <TextView
         android:id="@+id/PayHere"
         android:layout_width="205dp"
+        android:textStyle="bold"
         android:layout_height="54dp"
-        android:text="@string/text_label_final_pay"
+        android:text="@string/checkout_button"
         android:textColor="@color/blue"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -72,4 +73,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/FinalPaymentInfo"
         app:layout_constraintVertical_bias="0.294" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="97dp"
+        android:layout_height="19dp"
+        android:textColor="@color/blue"
+        android:textSize="15sp"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/order_details"
+        app:layout_constraintBottom_toTopOf="@+id/finalOrderSummary"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:textSize="15sp"
+        android:textColor="@color/blue"
+        android:layout_marginEnd="172dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/order_payment"
+        app:layout_constraintBottom_toTopOf="@+id/FinalPaymentInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finalOrderSummary"
+        app:layout_constraintVertical_bias="0.714" />
 </androidx.constraintlayout.widget.ConstraintLayout>

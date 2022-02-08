@@ -37,6 +37,13 @@
             android:layout_height="69dp"
             android:onClick="storeClick"
             android:text="@string/radio_label_domi" />
+        <RadioButton
+            android:id="@+id/Aryanpapa"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:onClick="storeClick"
+            android:text="@string/radio_label_papa" />
+
 
     </RadioGroup>
 
@@ -65,6 +72,7 @@
         app:layout_constraintVertical_bias="0.345"
         app:srcCompat="@drawable/pizpiz" />
 
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="124dp"
@@ -88,6 +96,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.446"
         app:srcCompat="@drawable/pizzanova" />
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="121dp"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65"
+        app:srcCompat="@drawable/papa" />
 
     <TextView
         android:id="@+id/AryanWelcomeMsg"
