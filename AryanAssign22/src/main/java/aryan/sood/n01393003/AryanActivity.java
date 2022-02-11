@@ -31,6 +31,7 @@ public class AryanActivity extends AppCompatActivity {
     String store = null;
     int StoreId = 0;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aryan);
@@ -104,7 +105,6 @@ public class AryanActivity extends AppCompatActivity {
             case R.id.AryanHelp:
                 intent = new Intent(Intent.ACTION_VIEW,
                         Uri.parse(helpSite));
-                Context context = getApplicationContext();
                 startActivity(intent);
                 break;
             case R.id.Aryanlogo2:
