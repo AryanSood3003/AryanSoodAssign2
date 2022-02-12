@@ -4,16 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-
     tools:context=".OrderActivity">
-
     <TextView
         android:id="@+id/AryanStoreName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/blue"
         android:textSize="25sp"
+        style="@style/attr"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +24,7 @@
         android:layout_width="250dp"
         android:layout_height="165dp"
         android:layout_marginTop="40dp"
-        android:textColor="@color/blue"
+        style="@style/attr"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.434"
@@ -40,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/boston_style_9_99"
-            android:textColor="@color/blue"
+            style="@style/attr"
             tools:layout_conversion_absoluteHeight="48dp"
             tools:layout_conversion_absoluteWidth="250dp"
             tools:layout_editor_absoluteX="70dp"
@@ -51,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cheese_5_99"
-            android:textColor="@color/blue"
+            style="@style/attr"
             tools:layout_conversion_absoluteHeight="48dp"
             tools:layout_conversion_absoluteWidth="250dp"
             tools:layout_editor_absoluteX="70dp"
@@ -62,8 +59,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/chicago_style_12_99"
-            android:textColor="@color/blue"
             tools:layout_conversion_absoluteHeight="48dp"
+            style="@style/attr"
             tools:layout_conversion_absoluteWidth="250dp"
             tools:layout_editor_absoluteX="70dp"
             tools:layout_editor_absoluteY="189dp" />
@@ -72,8 +69,8 @@
             android:id="@+id/AryanItalian"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            style="@style/attr"
             android:text="@string/italian_15_99"
-            android:textColor="@color/blue"
             tools:layout_conversion_absoluteHeight="38dp"
             tools:layout_conversion_absoluteWidth="250dp"
             tools:layout_editor_absoluteX="70dp"
@@ -95,30 +92,34 @@
         <TextView
             android:id="@+id/AryanSizeText"
             android:layout_width="wrap_content"
+            style="@style/attr"
             android:layout_height="wrap_content"
             android:text="@string/text_label_size"
-            android:textColor="@color/blue" />
+         />
 
         <RadioButton
             android:id="@+id/AryanSmall"
+            style="@style/attr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/small_4_50"
-            android:textColor="@color/blue" />
+           />
 
         <RadioButton
             android:id="@+id/AryanMedium"
+            style="@style/attr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/medium_6_5"
-            android:textColor="@color/blue" />
+         />
 
         <RadioButton
             android:id="@+id/AryanhLarge"
+            style="@style/attr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/large_8_5"
-            android:textColor="@color/blue" />
+           />
 
     </RadioGroup>
 
@@ -126,8 +127,8 @@
         android:id="@+id/AryanTypeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/attr"
         android:text="@string/text_label_type"
-        android:textColor="@color/blue"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.157"
@@ -139,8 +140,8 @@
         android:id="@+id/AryanToppings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/extra_toppings"
-        android:textColor="@color/blue"
+        style="@style/attr"
+       android:text="@string/extra_toppings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
@@ -153,7 +154,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/chicken_50"
-        android:textColor="@color/blue"
+        style="@style/attr"
         app:layout_constraintEnd_toStartOf="@+id/Aryanpepper"
         app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
@@ -163,9 +164,9 @@
         android:id="@+id/AryanOnions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/attr"
         android:layout_marginTop="608dp"
         android:text="@string/onions_50"
-        android:textColor="@color/blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.405"
         app:layout_constraintStart_toStartOf="parent"
@@ -176,9 +177,9 @@
         android:id="@+id/AryanPineapple"
         android:layout_width="141dp"
         android:layout_height="51dp"
+        style="@style/attr"
         android:layout_marginTop="16dp"
         android:text="@string/pineapple_50"
-        android:textColor="@color/blue"
         app:layout_constraintEnd_toStartOf="@+id/AryanExtraCheese"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
@@ -187,10 +188,10 @@
     <CheckBox
         android:id="@+id/AryanExtraCheese"
         android:layout_width="wrap_content"
+        style="@style/attr"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/extra_cheese_50"
-        android:textColor="@color/blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.782"
         app:layout_constraintStart_toStartOf="parent"
@@ -200,9 +201,9 @@
         android:id="@+id/Aryanpepper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/attr"
         android:layout_marginTop="32dp"
         android:text="@string/red_pepper_50"
-        android:textColor="@color/blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.752"
         app:layout_constraintStart_toStartOf="parent"

@@ -38,17 +38,18 @@ public class CheckoutActivity extends AppCompatActivity {
             finalpay.setText(getString(R.string.name) + payDetails[0] + getString(R.string.Card_num) + payDetails[1]+ getString(R.string.addr) + payDetails[2]+getString(R.string.province)+payDetails[3]);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-        @Override
-        public boolean onOptionsItemSelected(MenuItem item) {
-            switch (item.getItemId()) {
-                case android.R.id.home:
-                    finish();
-                    return true;
-                default:
-                    return super.onOptionsItemSelected(item);
-            }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent intent = new Intent(this, AryanActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        // Button checkout = (Button)findViewById(R.id.FinalCheckoutButton);
+    }
         public String alertMsg(){
             int rand = (int) Math.round((Math.random()*100));
             String msg= null;
