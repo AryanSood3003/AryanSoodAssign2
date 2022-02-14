@@ -125,7 +125,7 @@ public class AryanActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(AryanActivity.this);
+        AlertDialog.Builder builder    = new AlertDialog.Builder(AryanActivity.this);
         builder.setTitle(R.string.exit);
         builder.setMessage(R.string.exitmsg)
                 .setCancelable(false)

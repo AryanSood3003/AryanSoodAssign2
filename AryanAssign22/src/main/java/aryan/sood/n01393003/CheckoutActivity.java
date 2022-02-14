@@ -9,22 +9,28 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import com.google.android.material.snackbar.Snackbar;
 
 public class CheckoutActivity extends AppCompatActivity {
     double grossTotal =0;
     String[] orderDetails = new String[25];
     String[] payDetails = new String[25];
     boolean delivery =false;
+    MenuItem icon;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        icon = findViewById(R.id.AryanStoreLogo);
             Intent intent = getIntent();
             payDetails = intent.getStringArrayExtra(PaymentActivity.PAYMENT);
             delivery = intent.getBooleanExtra(PaymentActivity.DELIVERY,false);
@@ -40,16 +46,44 @@ public class CheckoutActivity extends AppCompatActivity {
         }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                Intent intent = new Intent(this, AryanActivity.class);
-                startActivity(intent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu,menu);
+        icon = menu.getItem(1);
+        return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = null;
+        String helpSite = getString(R.string.help_redirect);
+        switch (item.getItemId())
+        {
+            case R.id.AryanStoreLogo:
+                intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(getString(R.string.p_no)));
+                startActivity(intent);
+                break;
+            case R.id.AryanHelp:
+                intent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse(helpSite));
+                startActivity(intent);
+                break;
+            case R.id.Aryanlogo2:
+                View parentLayout = findViewById(android.R.id.content);
+                Snackbar snackbar=Snackbar.make(parentLayout,
+                        R.string.help_pizza,
+                        Snackbar.LENGTH_LONG);
+                snackbar.show();
+                break;
+            case android.R.id.home:
+                Intent intent2 = new Intent(this, AryanActivity.class);
+                startActivity(intent2);
+               break;
+
+        }   return super.onOptionsItemSelected(item);
+    }
+
         public String alertMsg(){
             int rand = (int) Math.round((Math.random()*100));
             String msg= null;

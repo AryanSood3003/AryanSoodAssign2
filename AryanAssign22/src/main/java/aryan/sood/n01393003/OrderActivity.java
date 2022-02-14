@@ -9,8 +9,11 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
@@ -31,7 +34,7 @@ public class OrderActivity extends AppCompatActivity {
     public static final String TOTAL = "TOTAL";
     public static final String SUMMARY = "SUMMARY";
     public static final  String LOCATION ="Store" ;
-
+MenuItem icon;
     String[] orderDetail = new String[20];
     String storeName="";
     String text;
@@ -41,6 +44,7 @@ public class OrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         String [] arr= getResources().getStringArray(R.array.stores);
         setContentView(R.layout.activity_order);
+        icon = findViewById(R.id.AryanStoreLogo);
         snackbar_show();
         storeName = getIntent().getStringExtra(AryanActivity.STORE);
         TextView storeTitle = findViewById(R.id.AryanStoreName);
@@ -69,6 +73,7 @@ public class OrderActivity extends AppCompatActivity {
                 {
                     @Override
                     public void onClick(View view) {
+
                         onCheckout(view);
                     }
                 });
@@ -177,16 +182,44 @@ public class OrderActivity extends AppCompatActivity {
 
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                Intent intent = new Intent(this, AryanActivity.class);
-               startActivity(intent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu,menu);
+        icon = menu.getItem(1);
+        return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = null;
+        String helpSite = getString(R.string.help_redirect);
+        switch (item.getItemId())
+        {
+            case R.id.AryanStoreLogo:
+                intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(getString(R.string.p_no)));
+                startActivity(intent);
+                break;
+            case R.id.AryanHelp:
+                intent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse(helpSite));
+                startActivity(intent);
+                break;
+            case R.id.Aryanlogo2:
+                View parentLayout = findViewById(android.R.id.content);
+                Snackbar snackbar=Snackbar.make(parentLayout,
+                        R.string.help_pizza,
+                        Snackbar.LENGTH_LONG);
+                snackbar.show();
+                break;
+            case android.R.id.home:
+                intent = new Intent(this, AryanActivity.class);
+                startActivity(intent);
+                break;
+
+        }   return super.onOptionsItemSelected(item);
+    }
+
     @Override
     public void onResume(){
         super.onResume();

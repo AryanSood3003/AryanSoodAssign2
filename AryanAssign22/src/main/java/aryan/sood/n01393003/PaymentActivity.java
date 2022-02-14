@@ -8,7 +8,10 @@ package aryan.sood.n01393003;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -16,6 +19,8 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.text.DecimalFormat;
 
@@ -26,7 +31,7 @@ public class PaymentActivity extends AppCompatActivity {
     public static final String DELIVERY = "DELIVERY";
     TextView totalLabel;
     EditText name,card,address;
-
+    MenuItem icon;
     String[] orderDetails = new String[25];
     String[] payInfo = new String[20];
     String CCname,CCnum,CCaddress,Province;
@@ -43,6 +48,7 @@ String storeName;
         address = findViewById(R.id.AryanAddress);
         String [] arr= getResources().getStringArray(R.array.stores);
         Intent intent = getIntent();
+        icon = findViewById(R.id.AryanStoreLogo);
         total(intent);
         storeName = getIntent().getStringExtra(OrderActivity.LOCATION);
         TextView storeTitle = findViewById(R.id.AryanStoreName);
@@ -83,16 +89,44 @@ String storeName;
 
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                Intent intent = new Intent(this, AryanActivity.class);
-                startActivity(intent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu,menu);
+        icon = menu.getItem(1);
+        return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = null;
+        String helpSite = getString(R.string.help_redirect);
+        switch (item.getItemId())
+        {
+            case R.id.AryanStoreLogo:
+                intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse(getString(R.string.p_no)));
+                startActivity(intent);
+                break;
+            case R.id.AryanHelp:
+                intent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse(helpSite));
+                startActivity(intent);
+                break;
+            case R.id.Aryanlogo2:
+                View parentLayout = findViewById(android.R.id.content);
+                Snackbar snackbar=Snackbar.make(parentLayout,
+                        R.string.help_pizza,
+                        Snackbar.LENGTH_LONG);
+                snackbar.show();
+                break;
+            case android.R.id.home:
+                intent = new Intent(this, AryanActivity.class);
+                startActivity(intent);
+                break;
+
+        }   return super.onOptionsItemSelected(item);
+    }
+
     public void addDelivery(boolean delivery){
         TextView deliveryCharge =  findViewById(R.id.DeliveryCharge);
         if(delivery){
